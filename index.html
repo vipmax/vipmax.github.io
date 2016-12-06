@@ -66,8 +66,8 @@
             preferCanvas: true
         });
 
-//        var TILE = "http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png"
-        var TILE = 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
+//        var TILE = "http://{s}.sm.mapstack.stamen.com/(toner-lite,$fff[difference],$fff[@23],$fff[hsl-saturation@20])/{z}/{x}/{y}.png";
+        var TILE = 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png';
         L.tileLayer(TILE, {
             subdomains: 'abcd',
             maxZoom: 19
@@ -83,8 +83,8 @@
     $.ajax({
         type: "GET",
 //        url: "http://192.168.0.118:8001/clustered_data.json",
-        url: "https://github.com/vipmax/vipmax.github.io/blob/master/data.json",
-        dataType: "text",
+        url: "http://rawgit.com/vipmax/vipmax.github.io/master/data.json",
+        dataType: "JSONP",
         success: function(d) {
             console.log(d);
             indata = d;
